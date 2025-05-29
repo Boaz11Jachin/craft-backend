@@ -10,5 +10,4 @@ import java.util.List;
 @Repository
 public interface BomRepository extends JpaRepository<Bom, Long> {
     public List<Bom> findByParentProduct(Product product);
-
 }

@@ -17,7 +17,6 @@ public class Bom {
     @ManyToOne
     private Product parentProduct;
 
-
     @ManyToOne
     @JoinColumn(name = "child_product_id")
     private Product childProduct;
