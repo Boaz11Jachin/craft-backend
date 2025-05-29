@@ -9,6 +9,7 @@ import org.codenova.craft.repository.OrderRepository;
 import org.codenova.craft.repository.ProductRepository;
 import org.codenova.craft.resquest.NewOrder;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,10 +22,10 @@ import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin
 public class OrderController {
     private final OrderRepository orderRepository;
     private final OrderItemRepository orderItemRepository;
-
     private final ProductRepository productRepository;
 
     @PostMapping("/api/order/new")
